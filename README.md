@@ -1,2 +1,4 @@
 "# Friend" 
 "# Friend" 
+"# friend" 
+"# friend" 
