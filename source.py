@@ -31,11 +31,21 @@ for photo in photos:
 if st.button("❤️ Click here to feel loved ❤️"):
     st.write("You are loved and appreciated more than words can express!")
 
-# Add a video slideshow
+# Add a video slideshow with "Next" button
 st.subheader("Special Video Messages")
-videos = ["video1.mp4", "video2.mp4"]  # Replace with your actual video filenames
-for video in videos:
-    st.video(video)
+videos = ["video1.mp4", "video2.mp4","video3.mp4"]  # Replace with your actual video filenames
+
+# Initialize session state for video index
+if 'video_index' not in st.session_state:
+    st.session_state.video_index = 0
+
+# Display current video
+st.video(videos[st.session_state.video_index])
+
+# Button to show next video
+if st.button("Next video for my amazing best friend!"):
+    st.session_state.video_index = (st.session_state.video_index + 1) % len(videos)
+    st.experimental_rerun()
 
 # Add a final thank you message
 st.write("Thank you for being the amazing person you are. This app is just a small token of my appreciation for our wonderful friendship. 💖")
