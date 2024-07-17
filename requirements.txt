@@ -1,5 +1,4 @@
 pillow
 requests
 streamlit
-PIL
-random
+randomgit ad .
